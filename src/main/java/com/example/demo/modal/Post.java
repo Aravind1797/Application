@@ -15,7 +15,7 @@ import java.util.Date;
 @Document(collection = "post")
 public class Post {
     @Id
-    private Long postId;
+    private String postId;
     public String post;
     private String postedBY;
     private Date CreatedAt;
