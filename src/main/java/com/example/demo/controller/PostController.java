@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/posts")
+@RequestMapping("/posts")
 public class PostController {
 
     @Autowired
@@ -27,8 +27,8 @@ public class PostController {
         return new ResponseEntity<Post>(postService.getPostDetails(postId), HttpStatus.OK);
     }
 
-    @PostMapping("/createPost")
-    public ResponseEntity<Post> createPost(Post post){
+    @PostMapping("/posts")
+    public ResponseEntity<Post> createPost(@RequestBody Post post){
         return new ResponseEntity<Post>(postService.createPost(post),HttpStatus.CREATED);
     }
 

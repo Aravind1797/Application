@@ -18,6 +18,6 @@ public class Post {
     private String postId;
     public String post;
     private String postedBY;
-    private Date CreatedAt;
-    private Date UpdatedAt;
+    private Date createdAt;
+    private Date updatedAt;
 }
